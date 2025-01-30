@@ -28,31 +28,13 @@
             android:textSize="18dp"></Button>
 
         <Button
-            android:id="@+id/joinRanGameButton"
+            android:id="@+id/joinGameButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Join a random game"
             android:textSize="16dp"></Button>
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/joinGameEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="10dp"
-        android:hint="Type here the game ID"
-        android:textSize="20dp"></EditText>
-
-    <Button
-        android:id="@+id/joinGameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Join game"
-        android:textSize="18dp"></Button>
 
 
 

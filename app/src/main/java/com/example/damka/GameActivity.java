@@ -25,16 +25,16 @@ public class GameActivity extends AppCompatActivity {
         String currentPlayerId = getIntent().getStringExtra("playerId");
         boolean isPlayer1 = getIntent().getBooleanExtra("isPlayer1", false);
 
-        if (gameId == null || currentPlayerId == null) {
-            Log.e("GameActivity", "Game ID or Player ID is missing!");
-            finish(); // Exit activity if critical data is missing
-            return;
-        }
-
         // Step 3: Initialize GameSessionManager
         gameSessionManager = new GameSessionManager(gameId, currentPlayerId);
 
-        // Step 4: Initialize the BoardGame view
+        // Step 4: Create or join a game
+        if(isPlayer1)
+            gameSessionManager.createGameSession(currentPlayerId);
+        else
+            gameSessionManager.joinGameSession(currentPlayerId);
+
+        // Step 5: Initialize the BoardGame view
         boardGame = new BoardGame(this, gameSessionManager);
         boardContainer.addView(boardGame); // Add the BoardGame view to the layout
 
